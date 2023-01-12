@@ -13,7 +13,7 @@ on:
       - "tests/*.py"
 
 jobs:
-  legacy-tests:
+  windows-legacy-tests:
     name: Run tests for (legacy) ${{ matrix.os }} for ${{ matrix.python }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -42,7 +42,7 @@ jobs:
       - name: Test
         run: python -m tox -e py
 
-  tests:
+  windows-tests:
     name: Run tests for ${{ matrix.os }} for ${{ matrix.python }}
     runs-on: ${{ matrix.os }}
     strategy:
