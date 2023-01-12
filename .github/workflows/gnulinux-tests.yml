@@ -48,9 +48,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-22.04]
         python:
-          - "3.6"
+#          - "3.6"  # python 3.6 breaks on ubuntu-22.04 (latest one at the time of writing this ;)
           - "3.7"
           - "3.8"
           - "3.9"
