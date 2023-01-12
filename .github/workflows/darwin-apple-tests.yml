@@ -15,7 +15,7 @@ on:
 
 jobs:
   macos-legacy-tests:
-    name: Run tests for (legacy) ${{ matrix.os }} for ${{ matrix.python }}
+    name: Python ${{ matrix.python }} on (legacy) ${{ matrix.os }} Tests
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -44,7 +44,7 @@ jobs:
         run: python -m tox -e py
 
   macos-tests:
-    name: Run tests for ${{ matrix.os }} for ${{ matrix.python }}
+    name: Python ${{ matrix.python }} on ${{ matrix.os }} Tests
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false

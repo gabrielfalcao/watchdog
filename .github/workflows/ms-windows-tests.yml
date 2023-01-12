@@ -14,7 +14,7 @@ on:
 
 jobs:
   windows-legacy-tests:
-    name: Run tests for (legacy) ${{ matrix.os }} for ${{ matrix.python }}
+    name: Python ${{ matrix.python }} on (legacy) ${{ matrix.os }} Tests
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -43,7 +43,7 @@ jobs:
         run: python -m tox -e py
 
   windows-tests:
-    name: Run tests for ${{ matrix.os }} for ${{ matrix.python }}
+    name: Python ${{ matrix.python }} on ${{ matrix.os }} Tests
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
